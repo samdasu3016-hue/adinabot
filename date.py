@@ -57,4 +57,5 @@ async def 출석(interaction: discord.Interaction):
     bot.save_data()
     await interaction.response.send_message(f"{user.mention}, 오늘도 안녕하다요!\n (누적 {user_data['count']}일차/연속 {user_data['streak']}일차)")
 
-bot.run(os.getenv('MTQyNzcwMDI0NTQyNDM3Mzg0MQ.GJ1io0.5z17ip1F_MxyIKpSmpNStMsKTeDoyC5-jbWg5E')) # 실제 봇 토큰임 이거유출되면좃됨
+
+bot.run('MTQyNzcwMDI0NTQyNDM3Mzg0MQ.GJ1io0.5z17ip1F_MxyIKpSmpNStMsKTeDoyC5-jbWg5E') # 실제 봇 토큰임 이거유출되면좃됨
