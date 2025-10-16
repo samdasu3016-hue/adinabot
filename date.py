@@ -1,8 +1,11 @@
 import discord
 from discord import app_commands
 from datetime import date, timedelta
-import json
+from dotenv import load_dotenv
 import os
+
+load_dotenv()
+TOKEN = os.getenv("DISCORD_TOKEN")
 
 class attendanceBot(discord.Client):
      def __init__(self):
@@ -58,6 +61,4 @@ async def 출석(interaction: discord.Interaction):
     await interaction.response.send_message(f"{user.mention}, 오늘도 안녕하다요!\n (누적 {user_data['count']}일차/연속 {user_data['streak']}일차)")
 
 
-bot.run("DISCORD_TOKEN") # 실제 봇 토큰임 이거유출되면좃됨
-
-
+bot.run(TOKEN)# 실제 봇 토큰임 이거유출되면좃됨
