@@ -62,3 +62,4 @@ async def 출석(interaction: discord.Interaction):
 
 
 bot.run(TOKEN)# 실제 봇 토큰임 이거유출되면좃됨
+print("TOKEN:", TOKEN)
